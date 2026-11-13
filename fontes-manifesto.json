@@ -1,0 +1,511 @@
+{
+  "notes_authored": [
+    "00 - Comece aqui.md",
+    "01 - Primeiros passos/Como usar este vault.md",
+    "01 - Primeiros passos/O que e a LuverLib.md",
+    "02 - Entenda o projeto/Conceitos essenciais.md",
+    "01 - Primeiros passos/Instalar e compilar.md",
+    "02 - Entenda o projeto/Arquitetura e ciclo do robo.md",
+    "02 - Entenda o projeto/Constants - onde configurar.md",
+    "03 - Modulos/Controle Xbox.md",
+    "03 - Modulos/Motores NEO.md",
+    "03 - Modulos/Motores Kraken.md",
+    "03 - Modulos/Tracao tank.md",
+    "03 - Modulos/Limelight.md",
+    "03 - Modulos/Telemetria.md",
+    "03 - Modulos/AdvantageScope.md",
+    "03 - Modulos/PathPlanner.md",
+    "03 - Modulos/AutoPrecision.md",
+    "01 - Primeiros passos/Primeiro uso - controle e tracao.md",
+    "01 - Primeiros passos/Integrar em outro robo.md",
+    "04 - Tutoriais/Adicionar um mecanismo.md",
+    "04 - Tutoriais/Ligar botoes a comandos.md",
+    "04 - Tutoriais/Preparar autonomo.md",
+    "04 - Tutoriais/Ajustar PID com AutoPrecision.md",
+    "04 - Tutoriais/Observar e registrar um teste.md",
+    "05 - Referencia/Configuracao AutoPrecision campo a campo.md",
+    "05 - Referencia/Unidades e sinais.md",
+    "05 - Referencia/Erros comuns.md",
+    "05 - Referencia/Glossario.md",
+    "05 - Referencia/Exemplos Java.md",
+    "06 - Caderno da equipe/Como registrar os testes.md",
+    "02 - Entenda o projeto/Referencia completa de Constants.md",
+    "05 - Referencia/API - Controles.md",
+    "05 - Referencia/API - Motores NEO.md",
+    "05 - Referencia/API - Motores Kraken.md",
+    "05 - Referencia/API - Limelight.md",
+    "05 - Referencia/API - Telemetria.md",
+    "05 - Referencia/API - AdvantageScope.md",
+    "05 - Referencia/API - PathPlanner.md",
+    "05 - Referencia/API - AutoPrecision.md",
+    "05 - Referencia/API - Composicao.md",
+    "05 - Referencia/Mapa de classes.md",
+    "05 - Referencia/Fontes e versao.md"
+  ],
+  "constants": [
+    {
+      "grupo": "Tracao",
+      "nome": "LIDER_ESQUERDO",
+      "valor": "4"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "SEGUIDOR_ESQUERDO",
+      "valor": "2"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "LIDER_DIREITO",
+      "valor": "1"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "SEGUIDOR_DIREITO",
+      "valor": "3"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "PIGEON",
+      "valor": "20"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "INVERTER_ESQUERDA",
+      "valor": "false"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "INVERTER_DIREITA",
+      "valor": "true"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "INVERTER_SEGUIDORES",
+      "valor": "false"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "CORRENTE_LIDERES_AMPERES",
+      "valor": "40"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "FREAR_LIDERES",
+      "valor": "true"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "CORRENTE_SEGUIDORES_AMPERES",
+      "valor": "80"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "FREAR_SEGUIDORES",
+      "valor": "false"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "TENSAO_NOMINAL_VOLTS",
+      "valor": "12.0"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "RAMPA_MALHA_ABERTA_SEGUNDOS",
+      "valor": "0.0"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "RAMPA_MALHA_FECHADA_SEGUNDOS",
+      "valor": "0.0"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "ROTACOES_MOTOR_POR_ROTACAO_SAIDA",
+      "valor": "1.0"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "LIMITE_POTENCIA",
+      "valor": "1.0"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "COMPENSAR_TENSAO",
+      "valor": "false"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "GRAVAR_CONFIGURACAO",
+      "valor": "true"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "ESCALA_FRENTE",
+      "valor": "0.4"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "ESCALA_GIRO",
+      "valor": "0.2"
+    },
+    {
+      "grupo": "Tracao",
+      "nome": "ZONA_MORTA",
+      "valor": "0.05"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "LIMITE_CORRENTE_AMPERES",
+      "valor": "40"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "INVERTER_SENTIDO",
+      "valor": "false"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "FREAR_AO_PARAR",
+      "valor": "true"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "TENSAO_NOMINAL_VOLTS",
+      "valor": "12.0"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "RAMPA_MALHA_ABERTA_SEGUNDOS",
+      "valor": "0.2"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "RAMPA_MALHA_FECHADA_SEGUNDOS",
+      "valor": "0.0"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "ROTACOES_MOTOR_POR_ROTACAO_SAIDA",
+      "valor": "1.0"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "LIMITE_SAIDA",
+      "valor": "1.0"
+    },
+    {
+      "grupo": "Neo",
+      "nome": "GRAVAR_CONFIGURACAO",
+      "valor": "true"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "MODELO_PADRAO",
+      "valor": "ModeloKraken.X60"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "LIMITE_ALIMENTACAO_AMPERES",
+      "valor": "40"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "LIMITE_ESTATOR_AMPERES",
+      "valor": "60"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "INVERTER_SENTIDO",
+      "valor": "false"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "FREAR_AO_PARAR",
+      "valor": "true"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "TENSAO_MAXIMA_VOLTS",
+      "valor": "12"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "RAMPA_MALHA_ABERTA_SEGUNDOS",
+      "valor": "0.2"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "RAMPA_MALHA_FECHADA_SEGUNDOS",
+      "valor": "0"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "ROTACOES_MOTOR_POR_ROTACAO_SAIDA",
+      "valor": "1"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "LIMITE_SAIDA",
+      "valor": "1"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "TIMEOUT_CONFIGURACAO_SEGUNDOS",
+      "valor": "0.25"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "TENTATIVAS_CONFIGURACAO",
+      "valor": "3"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "FREQUENCIA_ENCODER_HZ",
+      "valor": "50"
+    },
+    {
+      "grupo": "Kraken",
+      "nome": "FREQUENCIA_TELEMETRIA_HZ",
+      "valor": "10"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "PORTA_PILOTO",
+      "valor": "0"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "PORTA_OPERADOR",
+      "valor": "1"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "ANALOGICO_ESQUERDO_X",
+      "valor": "new PerfilEixo(0.08, 1.0, 1.0, false)"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "ANALOGICO_ESQUERDO_Y",
+      "valor": "new PerfilEixo(0.08, 1.0, 1.0, false)"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "ANALOGICO_DIREITO_X",
+      "valor": "new PerfilEixo(0.08, 1.0, 1.0, false)"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "ANALOGICO_DIREITO_Y",
+      "valor": "new PerfilEixo(0.08, 1.0, 1.0, false)"
+    },
+    {
+      "grupo": "Controle",
+      "nome": "LIMIAR_GATILHOS",
+      "valor": "0.5"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "PID_TRANSLACAO",
+      "valor": "new PIDConstants(5.0, 0.0, 0.0)"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "PID_ROTACAO",
+      "valor": "new PIDConstants(5.0, 0.0, 0.0)"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "VELOCIDADE_MAXIMA_METROS_POR_SEGUNDO",
+      "valor": "2.0"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "ACELERACAO_MAXIMA_METROS_POR_SEGUNDO_QUADRADO",
+      "valor": "2.0"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "VELOCIDADE_ANGULAR_MAXIMA_GRAUS_POR_SEGUNDO",
+      "valor": "360.0"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "ACELERACAO_ANGULAR_MAXIMA_GRAUS_POR_SEGUNDO_QUADRADO",
+      "valor": "540.0"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "TENSAO_NOMINAL_VOLTS",
+      "valor": "12.0"
+    },
+    {
+      "grupo": "PathPlanner",
+      "nome": "PERIODO_CONTROLE_SEGUNDOS",
+      "valor": "0.02"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "METODO_POSE",
+      "valor": "MetodoPose.MEGATAG_2"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "IDADE_MAXIMA_QUADRO_SEGUNDOS",
+      "valor": "0.25"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "IDADE_MAXIMA_ORIENTACAO_SEGUNDOS",
+      "valor": "0.10"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "GIRO_MAXIMO_GRAUS_SEGUNDO",
+      "valor": "360.0"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "AMBIGUIDADE_MAXIMA_TAG_UNICA",
+      "valor": "0.30"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "ERRO_Z_MAXIMO_METROS",
+      "valor": "0.75"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "DISTANCIA_MAXIMA_TAGS_METROS",
+      "valor": "8.0"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "DESVIO_LINEAR_BASE_METROS",
+      "valor": "0.02"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "DESVIO_ANGULAR_BASE_RADIANOS",
+      "valor": "0.06"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "FATOR_CONFIANCA",
+      "valor": "1.0"
+    },
+    {
+      "grupo": "Limelight",
+      "nome": "FATOR_LINEAR_MEGATAG2",
+      "valor": "0.5"
+    },
+    {
+      "grupo": "AdvantageScope",
+      "nome": "RAIZ_TABELA",
+      "valor": "\"LuverLib\""
+    },
+    {
+      "grupo": "AdvantageScope",
+      "nome": "INTERVALO_SEGUNDOS",
+      "valor": "0.02"
+    },
+    {
+      "grupo": "AdvantageScope",
+      "nome": "ATUALIZACAO_AUTOMATICA",
+      "valor": "true"
+    },
+    {
+      "grupo": "AdvantageScope",
+      "nome": "GRAVAR_JOYSTICKS",
+      "valor": "true"
+    },
+    {
+      "grupo": "AutoPrecision",
+      "nome": "PERIODO_SEGUNDOS",
+      "valor": "0.02"
+    },
+    {
+      "grupo": "AutoPrecision",
+      "nome": "TIMEOUT_HEARTBEAT_SEGUNDOS",
+      "valor": "0.5"
+    }
+  ],
+  "classes_documentadas": 56,
+  "fontes": {
+    "src/main/java/frc/robot/Constants.java": "2b64c5ddb44a85c198e86f5696548b6b481d9be720dabfbb14a9338b454fa220",
+    "src/main/java/frc/robot/Main.java": "ca31e9219b9738dad7807cd0f14c4c1abea04d2bffdecc066750fa63ec7991bf",
+    "src/main/java/frc/robot/Robot.java": "e4f2e7b1cfa6a46d4eeee96061fe81b9fc3b36e20c2377c0c1bc139d5045cbcb",
+    "src/main/java/frc/robot/RobotContainer.java": "f2ab31f36deb58e949b5b526c3ae7a42994f94e3c934086392b0bfed3299be6d",
+    "src/main/java/frc/robot/commands/DirigirTank.java": "f53af853a4cd6ff3f8187833a010f6e343bda0ce5297cca32c4cdea9240aaf7d",
+    "src/main/java/frc/robot/luverlib/advantagescope/AdvantageScope.java": "ae17570b503396096a895129fd6e18d13cb45215aa97fdb019611943331816ca",
+    "src/main/java/frc/robot/luverlib/advantagescope/CanalAdvantageScope.java": "33264f322539d10649773814fc91fde4bdb00aa166a647ab97d02cd1c48ce9cc",
+    "src/main/java/frc/robot/luverlib/advantagescope/ConfiguracaoAdvantageScope.java": "daf6e012459214217e6c811dcfd632b2e763c733515e5cdf8c504978acac03cd",
+    "src/main/java/frc/robot/luverlib/advantagescope/GravacaoAdvantageScope.java": "ee6b4da4d2b6c5a9b19264f8ea11076c1f1dd2696d1eeaa8e4d4093f0a9953a5",
+    "src/main/java/frc/robot/luverlib/advantagescope/VariaveisAdvantageScope.java": "15cca2526907b17018df377c45cb20bcabec843aa6f43b937389fadb5cb7a802",
+    "src/main/java/frc/robot/luverlib/autoprecision/AutoPrecision.java": "b5f654f4873427a99b83711a1279631fd9592de64082334400c4274057fac59b",
+    "src/main/java/frc/robot/luverlib/autoprecision/ConfiguracaoAutoPrecision.java": "b603c158629b60883a5d8495b203128f93c905775a3debeee495e5a8c2a30b8d",
+    "src/main/java/frc/robot/luverlib/autoprecision/ControleAutoPrecision.java": "1c28919842439f212e6b1323a632a6c90f56a45a760d5938797e5414257ba6ca",
+    "src/main/java/frc/robot/luverlib/autoprecision/ControleNeoAutoPrecision.java": "b5e6d8561cadbf476825bdceae95212677b369afd1b7d53d1859726ff0b1a6d1",
+    "src/main/java/frc/robot/luverlib/autoprecision/GanhosPID.java": "0627867a70387c671f5a610eb706251f1b08bfb08a4c535fbf5d05630bde3979",
+    "src/main/java/frc/robot/luverlib/autoprecision/LimitesAutoPrecision.java": "8dd34c0b3010c1735f0223dbb2e1986230643d64e71ab80d6b6a0cdfd9212df5",
+    "src/main/java/frc/robot/luverlib/autoprecision/PainelAutoPrecision.java": "b71f02213869d39e0af4d9358d88fe2c22f03f65073f26d7d7af89a29b95c3d3",
+    "src/main/java/frc/robot/luverlib/autoprecision/VariaveisAutoPrecision.java": "3d15de15699201148e594fce6c4ed5470a1ecf5269279cc7b8b71bbb1767f35e",
+    "src/main/java/frc/robot/luverlib/controles/ControleXbox.java": "2b88d6bc09760cf0ea4780c60a3b320a1045e5fcb69326ca5737276f656cb104",
+    "src/main/java/frc/robot/luverlib/controles/PerfilEixo.java": "7d9e9037171da4c9bd5053bf8d862bb1fa2edf64e57df9c9b8110dbfd8e45a29",
+    "src/main/java/frc/robot/luverlib/controles/VariaveisControle.java": "40933be0536602b771c8fda094de3adfc04b68c21cce97861ec6a5c0e8934de7",
+    "src/main/java/frc/robot/luverlib/limelight/AlvoLimelight.java": "1593799e799d2dd66c888055889e520db848487f3632c245b0a49a860c4137e2",
+    "src/main/java/frc/robot/luverlib/limelight/AvaliacaoPose.java": "45f9714bba14346e3dcb1463eb0dc0f0655e176ccd0d772ac6ddbe204b38b593",
+    "src/main/java/frc/robot/luverlib/limelight/ConfiguracaoLimelight.java": "b306461213797c2325ca096b575e6c3dfc568f3c7f704e7e842e437c79f2330f",
+    "src/main/java/frc/robot/luverlib/limelight/DecodificadorLimelight.java": "3a618f6c33804ca644488a5b027ed2ea212d0c50f607ca8f8885220220a1ba27",
+    "src/main/java/frc/robot/luverlib/limelight/DeteccaoNeural.java": "7c92f45fe098a76a713628b5de2720f5b858c1213ffb0fd2ef4c7e88985084d8",
+    "src/main/java/frc/robot/luverlib/limelight/Limelight.java": "1f2ed2401f80a9ea751c6463097375329f34030a0b0472a3a94e248b5c8d8a8b",
+    "src/main/java/frc/robot/luverlib/limelight/LimitesCampo.java": "35bc63f72cbda849837f3e81f2fe6abd4a6c743d7ed26eaa56ccf64f8830b9bc",
+    "src/main/java/frc/robot/luverlib/limelight/MarcadorAprilTag.java": "f75cc3b6f25cbf356331e4c6a603f078319edf6213d03a5ad362d3dd6e5a263e",
+    "src/main/java/frc/robot/luverlib/limelight/MedicaoVisao.java": "18e678df3c266c81b9ed6ebde7fcafc2d809bc90fa7b17e400ffda56881a07e1",
+    "src/main/java/frc/robot/luverlib/limelight/MetodoPose.java": "22f75a89daf8a08b50ca9886ce5776198bd059cf3f446728085f341c21b3a283",
+    "src/main/java/frc/robot/luverlib/limelight/OrientacaoRobo.java": "b321e442137d07daa21810f7fc6aee26c22f35b71bd809dedf85ca0a30826dce",
+    "src/main/java/frc/robot/luverlib/limelight/PosicaoCamera.java": "358542ec0806849ed2068e036a8f84f2597bb635f6f890e93e79897125e242af",
+    "src/main/java/frc/robot/luverlib/limelight/VariaveisLimelight.java": "f32303adc7b38d220622b097211c8f02e696bbeec82d72da4fcab720d19b19fa",
+    "src/main/java/frc/robot/luverlib/limelight/VisaoLimelight.java": "185937f2b3043e82c0211cc4cf11c51e288cf8cbec155a77530f288f63556848",
+    "src/main/java/frc/robot/luverlib/motores/kraken/ConfiguracaoMotorKraken.java": "65b887e2c1f8e0e297c04a3ef6371be45e29b6b2bc0fbd3843d571d429c89e95",
+    "src/main/java/frc/robot/luverlib/motores/kraken/ModeloKraken.java": "446d2544009ef1ab3b86bdca4cb37c061e62827d968595a5eb225634dd7ee832",
+    "src/main/java/frc/robot/luverlib/motores/kraken/MotorKraken.java": "49630c1797f632292734a543c04986ca88378a5a56a482de6fa64c1ba62bb0f8",
+    "src/main/java/frc/robot/luverlib/motores/kraken/VariaveisMotorKraken.java": "b7af34b028bfbafca913e137a9f44e572a08bbd21e127b74618c087fffab7e1a",
+    "src/main/java/frc/robot/luverlib/motores/neo/ConfiguracaoMotorNeo.java": "342ff2d18ab9de459ad3606fb087d96e656d70c14b4bb2f8595ee4a20bb7ea9a",
+    "src/main/java/frc/robot/luverlib/motores/neo/MotorNeo.java": "642dccafdf799c04c389cc524a3f17e413f92cbfd5862ed3ce866596fb7f8fc5",
+    "src/main/java/frc/robot/luverlib/motores/neo/VariaveisMotor.java": "3daffdd372411b0356e83b28561cd8f6aa6581f9017d4b1d13938906fd6c5ae7",
+    "src/main/java/frc/robot/luverlib/pathplanner/ArquivosPathPlanner.java": "3155e52d8b46d609d05d683c50000b67d353af02bce983df81eb98b91a26743f",
+    "src/main/java/frc/robot/luverlib/pathplanner/ConexaoPathPlanner.java": "54874659c5a0f953295ee49aa2dde87054cc5896b044c7ecbb2f8265b4299045",
+    "src/main/java/frc/robot/luverlib/pathplanner/ConfiguracaoPathPlanner.java": "4e126af31391c95e8f16708dcec0f15ec27eb2ec0628332fee4d4f519f6372b6",
+    "src/main/java/frc/robot/luverlib/pathplanner/ConfiguracaoTankPathPlanner.java": "5b0dd73c7be50ff2be67dd816595d8f3212478f4c8c784dc2b179da33aa8b0b9",
+    "src/main/java/frc/robot/luverlib/pathplanner/PathPlannerLuver.java": "41df58e59c1ca74c307a766472cb42a215f131ca20144fa3a04b1d129191e96c",
+    "src/main/java/frc/robot/luverlib/pathplanner/SeletorAutonomo.java": "3962772e8f4886d86d527140c63ff2a802f3e3212c0fb85b77c6e1d6555201aa",
+    "src/main/java/frc/robot/luverlib/pathplanner/TankPathPlanner.java": "5837f1c39118d2b5baab0972f1406fd73559ce54cbf118efb7a15d5b857298e1",
+    "src/main/java/frc/robot/luverlib/pathplanner/VariaveisPathPlanner.java": "f7e5a6e59d9b646c53ddb8e1b226bc763cc013c0677facc57a6e8499783262ed",
+    "src/main/java/frc/robot/luverlib/telemetria/Telemetria.java": "1037a9f1a760184a74dfdb7955d2382cf16a95dad47ff9e4a07f1ce86cb757c4",
+    "src/main/java/frc/robot/luverlib/telemetria/TelemetriaLimelight.java": "102c568604fc5fc6e8855f5871ab9fe158ffcb332377bc02ba628d7c711bfa26",
+    "src/main/java/frc/robot/luverlib/telemetria/TelemetriaMotorKraken.java": "9ce4ae4f9988bde192d53bb91b326cc5ea0ef510b006b0b044f9a89ac6e4436d",
+    "src/main/java/frc/robot/luverlib/telemetria/TelemetriaMotorNeo.java": "8288e3803cc0ee1639cef315ad7547be3abe6f6bed462a953aff99df98f7ab18",
+    "src/main/java/frc/robot/luverlib/telemetria/TelemetriaXbox.java": "d85bf414b35b52c5ad0d05857ef4e6ae10dddf110090ae42a568b9aa3f321a0a",
+    "src/main/java/frc/robot/subsystems/ChassiTank.java": "7090ddc91e0c962eda1cdb38a6cf8e900a14a3491f9ae10af77a94e9e3899afe",
+    "examples/ExemploAutoPrecisionNeo.java": "750366daf693c8db16e9a74f7a16c5516b4e1edae2f872b5090ef83924cadc85",
+    "ferramentas/autoprecision/autoprecision.py": "68d4e1f39c566575e59dcb6ff1b9e853eeb2376fe769d7e7e85f6613a7bb4ce5",
+    "ferramentas/autoprecision/cliente.py": "0baa657c3fb3bc13540d02e4b6f33af0c59888c7ff231b32ae234b1def633f38",
+    "ferramentas/autoprecision/otimizador.py": "e94e3428e093ae2bcdfea824d63f53b118d69eaaa5dd1c610c0462cc80713bd5",
+    "ferramentas/autoprecision/simulador.py": "f8e288300b38bc37164294e0220da7dfd121855261caefa13668b0a8c021ed8a",
+    "ferramentas/autoprecision/test_otimizador.py": "fd37f8d49e840707ad61fee6704986cee743eba090b7e4ee5e61f9733dad3168",
+    "vendordeps/AdvantageKit.json": "23bfed626272dc4b2758dfb0db4852657ea262d7073ad58761fc2d5e061a4e30",
+    "vendordeps/PathplannerLib.json": "7b20536c6e6c58079fd24ae299a526ad4469ccd60f1ee038393ba5b8a52f1c14",
+    "vendordeps/Phoenix6-26.3.0.json": "b47c613c917f3a0c9120b1f87cb5d6f09a438ea6495efe054c73ea176dad4523",
+    "vendordeps/REVLib.json": "0e71e84fd1e954ae4ec702a9a98e85cda8c89417065094131477f9203fabb592",
+    "vendordeps/WPILibNewCommands.json": "dd836a57b0e6b37230ef97064694b5d4680c78c85a88d4c97a560488b5bf78e2",
+    "build.gradle": "b0e40d9004e9a826617f8e99f3e60060dd4988d9dd1428a8130e682b2b8db1ad",
+    "settings.gradle": "0aa9e644dd73b44122ea9d6c34127b0f69ca7f73d24ef1543df64eaa5c8590ce",
+    "LICENSE": "d55a8bb352bf38289d81c145bc4482f89df67d4620f4e0ca65aabc27dd73f98a",
+    "README.md": "25f4fe4e72b347bd41f74a54a904c8081525fae56910183db1e2df65e1645c19",
+    "CONTRIBUTING.md": "4aec594531acab0e126f0ba5ed057d1d98ef3bf5469a10b28665b4fa987e60e9",
+    "ferramentas/autoprecision/requirements.txt": "760dacd64075cc11b9ed9c8d0de1c2ffd77791b9199669ada29adcddddf9d927",
+    ".wpilib/wpilib_preferences.json": "311bec5ffc760cde7fc3ccc9ff0dd5a99cbfe7509a9bce44a7dc391aaa1dabb1"
+  },
+  "snapshot_commit_base": "e504a04c5f51b0968e11878cb87591ceddf9bd0c",
+  "escopo": "Fontes consultadas em 13/11/2026 com centralização local de Constants; não representam a árvore atual da main."
+}

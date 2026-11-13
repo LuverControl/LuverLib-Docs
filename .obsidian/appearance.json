@@ -1,0 +1,8 @@
+{
+  "theme": "obsidian",
+  "accentColor": "#e8b94e",
+  "enabledCssSnippets": [
+    "luverlib"
+  ],
+  "showRibbon": true
+}

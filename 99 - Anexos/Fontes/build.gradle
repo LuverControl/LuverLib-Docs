@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'edu.wpi.first.GradleRIO' version '2026.2.1'
+}
+
+version = '1.1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// Mantém os exemplos publicados compilando com a mesma API da biblioteca.
+sourceSets {
+    examples {
+        java.srcDir 'examples'
+        compileClasspath += sourceSets.main.output + configurations.compileClasspath
+    }
+}
+
+tasks.named('check') { dependsOn tasks.named('compileExamplesJava') }
+
+dependencies {
+    annotationProcessor wpi.java.deps.wpilibAnnotations()
+    implementation wpi.java.deps.wpilib()
+    implementation wpi.java.vendor.java()
+    nativeDebug wpi.java.deps.wpilibJniDebug(wpi.platforms.desktop)
+    nativeDebug wpi.java.vendor.jniDebug(wpi.platforms.desktop)
+    nativeRelease wpi.java.deps.wpilibJniRelease(wpi.platforms.desktop)
+    nativeRelease wpi.java.vendor.jniRelease(wpi.platforms.desktop)
+    simulationDebug wpi.sim.enableDebug()
+    simulationRelease wpi.sim.enableRelease()
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test { useJUnitPlatform() }
+
+wpi.sim.addGui().defaultEnabled = true
+wpi.sim.addDriverstation()
+
+jar {
+    from('LICENSE') { into 'META-INF'; rename { 'LICENSE-LuverLib.txt' } }
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest('frc.robot.Main')
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+wpi.java.configureExecutableTasks(jar)
+wpi.java.configureTestTasks(test)
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    // Confere nosso código sem bloquear por metadados de anotações opcionais em JARs externos.
+    options.compilerArgs.addAll(['-Xlint:all,-classfile', '-Werror', '-XDstringConcat=inline'])
+}

@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "grupo-aprender",
+      "type": "group",
+      "x": -50,
+      "y": -60,
+      "width": 1870,
+      "height": 840,
+      "label": "1. Entenda e prepare",
+      "color": "3"
+    },
+    {
+      "id": "grupo-modulos",
+      "type": "group",
+      "x": -50,
+      "y": 850,
+      "width": 2350,
+      "height": 850,
+      "label": "2. Escolha o recurso que quer usar",
+      "color": "5"
+    },
+    {
+      "id": "inicio",
+      "type": "file",
+      "file": "00 - Comece aqui.md",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "conceitos",
+      "type": "file",
+      "file": "02 - Entenda o projeto/Conceitos essenciais.md",
+      "x": 470,
+      "y": 0,
+      "width": 380,
+      "height": 300
+    },
+    {
+      "id": "instalar",
+      "type": "file",
+      "file": "01 - Primeiros passos/Instalar e compilar.md",
+      "x": 940,
+      "y": 0,
+      "width": 380,
+      "height": 300
+    },
+    {
+      "id": "ajustes",
+      "type": "file",
+      "file": "02 - Entenda o projeto/Constants - onde configurar.md",
+      "x": 470,
+      "y": 400,
+      "width": 380,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "primeiro",
+      "type": "file",
+      "file": "01 - Primeiros passos/Primeiro uso - controle e tracao.md",
+      "x": 940,
+      "y": 400,
+      "width": 380,
+      "height": 300
+    },
+    {
+      "id": "aplicar",
+      "type": "file",
+      "file": "04 - Tutoriais/Adicionar um mecanismo.md",
+      "x": 1410,
+      "y": 400,
+      "width": 380,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "legenda",
+      "type": "text",
+      "text": "# Como usar este mapa\n\nSiga a primeira linha para começar. Depois, abra a nota do módulo que deseja usar. As setas mostram relações entre os recursos.\n\nOs ajustes ficam em Constants. Dê zoom e mova os cartões conforme seu estudo.",
+      "x": 1410,
+      "y": 0,
+      "width": 380,
+      "height": 300
+    },
+    {
+      "id": "controle",
+      "type": "file",
+      "file": "03 - Modulos/Controle Xbox.md",
+      "subpath": "#O que é",
+      "x": 0,
+      "y": 920,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "neo",
+      "type": "file",
+      "file": "03 - Modulos/Motores NEO.md",
+      "subpath": "#O que é",
+      "x": 470,
+      "y": 920,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "kraken",
+      "type": "file",
+      "file": "03 - Modulos/Motores Kraken.md",
+      "subpath": "#O que é",
+      "x": 940,
+      "y": 920,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "tank",
+      "type": "file",
+      "file": "03 - Modulos/Tracao tank.md",
+      "subpath": "#O que é",
+      "x": 1410,
+      "y": 920,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "telemetria",
+      "type": "file",
+      "file": "03 - Modulos/Telemetria.md",
+      "subpath": "#O que é",
+      "x": 1880,
+      "y": 920,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "visao",
+      "type": "file",
+      "file": "03 - Modulos/Limelight.md",
+      "subpath": "#O que é",
+      "x": 0,
+      "y": 1320,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "caminhos",
+      "type": "file",
+      "file": "03 - Modulos/PathPlanner.md",
+      "subpath": "#O que é",
+      "x": 470,
+      "y": 1320,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "precision",
+      "type": "file",
+      "file": "03 - Modulos/AutoPrecision.md",
+      "subpath": "#O que é",
+      "x": 940,
+      "y": 1320,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    },
+    {
+      "id": "logs",
+      "type": "file",
+      "file": "03 - Modulos/AdvantageScope.md",
+      "subpath": "#O que é",
+      "x": 1410,
+      "y": 1320,
+      "width": 380,
+      "height": 310,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "aresta-0",
+      "fromNode": "inicio",
+      "fromSide": "right",
+      "toNode": "conceitos",
+      "toSide": "left",
+      "label": "aprenda os termos"
+    },
+    {
+      "id": "aresta-1",
+      "fromNode": "conceitos",
+      "fromSide": "right",
+      "toNode": "instalar",
+      "toSide": "left",
+      "label": "prepare o ambiente"
+    },
+    {
+      "id": "aresta-2",
+      "fromNode": "instalar",
+      "fromSide": "right",
+      "toNode": "ajustes",
+      "toSide": "left",
+      "label": "configure o robô"
+    },
+    {
+      "id": "aresta-3",
+      "fromNode": "ajustes",
+      "fromSide": "right",
+      "toNode": "primeiro",
+      "toSide": "left",
+      "label": "entenda a pilotagem"
+    },
+    {
+      "id": "aresta-4",
+      "fromNode": "primeiro",
+      "fromSide": "right",
+      "toNode": "aplicar",
+      "toSide": "left",
+      "label": "aplique em um mecanismo"
+    },
+    {
+      "id": "aresta-5",
+      "fromNode": "controle",
+      "fromSide": "right",
+      "toNode": "tank",
+      "toSide": "left",
+      "label": "pilota"
+    },
+    {
+      "id": "aresta-6",
+      "fromNode": "neo",
+      "fromSide": "right",
+      "toNode": "tank",
+      "toSide": "left",
+      "label": "aciona"
+    },
+    {
+      "id": "aresta-7",
+      "fromNode": "neo",
+      "fromSide": "right",
+      "toNode": "precision",
+      "toSide": "left",
+      "label": "backend disponível"
+    },
+    {
+      "id": "aresta-8",
+      "fromNode": "tank",
+      "fromSide": "right",
+      "toNode": "caminhos",
+      "toSide": "left",
+      "label": "exige conexão real"
+    },
+    {
+      "id": "aresta-9",
+      "fromNode": "visao",
+      "fromSide": "right",
+      "toNode": "logs",
+      "toSide": "left",
+      "label": "publique medições"
+    },
+    {
+      "id": "aresta-10",
+      "fromNode": "telemetria",
+      "fromSide": "right",
+      "toNode": "logs",
+      "toSide": "left",
+      "label": "observe e registre"
+    },
+    {
+      "id": "aresta-11",
+      "fromNode": "kraken",
+      "fromSide": "right",
+      "toNode": "telemetria",
+      "toSide": "left",
+      "label": "publique diagnóstico"
+    }
+  ]
+}

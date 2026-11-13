@@ -1,0 +1,6 @@
+
+.markdown-preview-view h1, .markdown-source-view .cm-header-1 { color: var(--text-accent); }
+.markdown-preview-view h2 { margin-top: 1.8em; }
+.markdown-preview-view table { font-size: 0.94em; }
+.markdown-preview-view th { background: var(--background-secondary); }
+.markdown-preview-view .callout { border-radius: 10px; }
